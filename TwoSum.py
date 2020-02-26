@@ -1,3 +1,9 @@
+"""
+https://leetcode.com/problems/two-sum/submissions/
+This solving method designed with bruteforce.it's more slowly method than others.
+"""
+
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
