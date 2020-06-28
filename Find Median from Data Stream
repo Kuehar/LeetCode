@@ -1,0 +1,36 @@
+class MedianFinder:
+
+    def __init__(self):
+        """
+        initialize your data structure here.
+        """
+        self.sorted_list = []
+        self.length = 0
+        
+
+    def addNum(self, num: int) -> None:
+        low,high = 0,self.length-1
+        while high >= low:
+            mid = (high+low)//2
+            if self.sorted_list[mid] > num:
+                high = mid-1
+            else:
+                low = mid+1
+        self.sorted_list.insert(low,num)
+        self.length += 1
+        
+
+    def findMedian(self) -> float:
+        if self.length % 2 == 0:
+            median = self.length//2
+            return (self.sorted_list[median]+self.sorted_list[median-1])/2.0
+        else:
+            return self.sorted_list[self.length//2]
+
+
+# Your MedianFinder object will be instantiated and called as such:
+# obj = MedianFinder()
+# obj.addNum(num)
+# param_2 = obj.findMedian()
+# Runtime: 296 ms, faster than 30.86% of Python3 online submissions for Find Median from Data Stream.
+# Memory Usage: 25.2 MB, less than 18.26% of Python3 online submissions for Find Median from Data Stream.
