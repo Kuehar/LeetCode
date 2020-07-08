@@ -16,3 +16,5 @@ class KthLargest:
 # Your KthLargest object will be instantiated and called as such:
 # obj = KthLargest(k, nums)
 # param_1 = obj.add(val)
+# Runtime: 136 ms, faster than 45.40% of Python3 online submissions for Kth Largest Element in a Stream.
+# Memory Usage: 17.6 MB, less than 78.45% of Python3 online submissions for Kth Largest Element in a Stream.
