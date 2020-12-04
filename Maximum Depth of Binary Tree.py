@@ -49,3 +49,20 @@ class Solution:
                 queue.append((curr.right, val+1))
 # Runtime: 36 ms, faster than 89.87% of Python3 online submissions for Maximum Depth of Binary Tree.
 # Memory Usage: 15 MB, less than 90.62% of Python3 online submissions for Maximum Depth of Binary Tree.
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def maxDepth(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+        left = self.maxDepth(root.left)
+        right = self.maxDepth(root.right)
+        
+        return max(left,right)+1
+# 36 ms	16 MB
