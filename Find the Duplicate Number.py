@@ -19,6 +19,7 @@ class Solution:
         for i in range(1,len(nums)):
             if nums[i] == nums[index-1]:
                 ans = nums[i]
+                index += 1
             else:
                 index += 1
         return ans
