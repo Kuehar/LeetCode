@@ -1,3 +1,5 @@
+# Plain Solution/ Time complexity O(N)
+
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
         ans = tmp = 0
