@@ -3,10 +3,12 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
+        
         l = len(matrix[0])
         for i in range(l//2 + l%2):
             for j in range(l//2):
                 tmp = matrix[l-1-j][i]
+                
                 matrix[l-1-j][i] = matrix[l-1-i][l-j-1]
                 matrix[l-1-i][l-j-1] = matrix[j][l-1-i]
                 matrix[j][l-1-i] = matrix[i][j]
