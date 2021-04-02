@@ -1,3 +1,5 @@
+# O(N) Solution
+
 class Solution:
     def hammingWeight(self, n: int) -> int:
         bits = 0
