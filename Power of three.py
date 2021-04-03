@@ -8,8 +8,8 @@ class Solution:
             if pow(3,i) == n:
                 return True
         return False
-#Runtime: 248 ms, faster than 87.60% of Python3 online submissions for Power of Three.
-#Memory Usage: 14.3 MB, less than 46.96% of Python3 online submissions for Power of Three.
+# Runtime: 240 ms, faster than 5.15% of Python3 online submissions for Power of Three.
+# Memory Usage: 14.4 MB, less than 13.91% of Python3 online submissions for Power of Three.
 
 
 class Solution:
