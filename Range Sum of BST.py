@@ -33,13 +33,6 @@ class Soluion:
 # Runtime: 244 ms, faster than 47.97% of Python3 online submissions for Range Sum of BST.
 # Memory Usage: 22.1 MB, less than 5.94% of Python3 online submissions for Range Sum of BST.
 
-
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def rangeSumBST(self, root: TreeNode, L: int, R: int) -> int:
         def dfs(root):
