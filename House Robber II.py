@@ -24,7 +24,8 @@ class Solution:
             return 0
         if len(nums) < 2:
             return nums[0]
-        
+        # Exclude nums[0] or nums[-1],then you will only choose bigger number.
+        # last two ans into max() are calcurated by using House Robber 1's function.
         numsExcludeLast = nums[:len(nums) - 1]
         numsExcludeFirst = nums[1:]
         excludeLastAns = self.robDP(numsExcludeLast)
