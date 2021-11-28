@@ -22,3 +22,17 @@ class Solution:
                 nums[h], nums[i] = nums[i], nums[h]
 # Runtime: 52 ms, faster than 54.28% of Python3 online submissions for Move Zeroes.
 # Memory Usage: 15 MB, less than 5.97% of Python3 online submissions for Move Zeroes.
+
+# bruteforce
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        cnt = 0
+        for i in range(len(nums)):
+            if nums[i] == 0:
+                cnt += 1
+        for j in range(cnt):
+            nums.remove(0)
+            nums.append(0)
