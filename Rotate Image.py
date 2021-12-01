@@ -3,12 +3,12 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        
+        # 横の長さを取得
         l = len(matrix[0])
+        # n*nの正方形なのでその半分回数分ループ(奇数の場合は切り上げ)
         for i in range(l//2 + l%2):
             for j in range(l//2):
                 tmp = matrix[l-1-j][i]
-                
                 matrix[l-1-j][i] = matrix[l-1-i][l-j-1]
                 matrix[l-1-i][l-j-1] = matrix[j][l-1-i]
                 matrix[j][l-1-i] = matrix[i][j]
