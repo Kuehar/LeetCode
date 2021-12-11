@@ -43,7 +43,8 @@ class Solution:
         memo = {}
         return minimum_cost(len(cost))
 
-# ↑の回答は以下のように書くこともできる    
+# ↑の回答は以下のように書くこともできる 
+# 注意!LeetCodeでは自動的にモジュールがインポートされるので大丈夫だが、本来であればインポートが必要
 class Solution:
     def minCostClimbingStairs(self, cost: List[int]) -> int:
         @cache
