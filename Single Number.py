@@ -1,3 +1,4 @@
+# ビット操作の例
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
         ans = 0
@@ -16,3 +17,7 @@ class Solution:
                 nums.pop(0)
             else:
                 return num
+
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        return reduce(lambda x, y: x ^ y, nums)
