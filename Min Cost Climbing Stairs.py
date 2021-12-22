@@ -59,3 +59,14 @@ class Solution:
         return minimum_cost(len(cost))
 # Time complexity: O(N)
 # Space complexity: O(N)
+
+
+
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        dp = [0]*(len(cost)+1)
+        for i in range(2,len(cost)+1):
+            dp[i] = min(dp[i-1]+cost[i-1],dp[i-2]+cost[i-2])
+        return dp[-1]
+# Runtime: 52 ms, faster than 93.14% of Python3 online submissions for Min Cost Climbing Stairs.
+# Memory Usage: 14.4 MB, less than 74.12% of Python3 online submissions for Min Cost Climbing Stairs.
