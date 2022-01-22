@@ -36,3 +36,22 @@ class Solution:
         for j in range(cnt):
             nums.remove(0)
             nums.append(0)
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        zero_count  = nums.count(0)
+        for i in range(zero_count):
+            nums.remove(0)
+            nums.append(0)
+# Runtime: 795 ms, faster than 13.08% of Python3 online submissions for Move Zeroes.
+# Memory Usage: 15.5 MB, less than 32.64% of Python3 online submissions for Move Zeroes.
+            
+            
+        
+        
+                
+        
+        
