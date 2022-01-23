@@ -7,12 +7,12 @@
 class Solution:
     def findNearestRightNode(self, root: TreeNode, u: TreeNode) -> Optional[TreeNode]:
         # BFSで走査すれば同じ深さ、かつ次のノードを見つけられる
+        # 2つのdequeを用意し、cur_levelは現在の階層、next_levelでは一つ下の階層のノードを確認する
         if root is None:
             return []
         
-        next_level = deque([root,])
+        next_level = deque([root])
         while next_level:
-            print(next_level)
             cur_level = next_level
             next_level = deque()
             
@@ -26,3 +26,5 @@ class Solution:
                     next_level.append(node.left)
                 if node.right:
                     next_level.append(node.right)
+# Runtime: 410 ms, faster than 40.94% of Python3 online submissions for Find Nearest Right Node in Binary Tree.
+# Memory Usage: 51.6 MB, less than 74.50% of Python3 online submissions for Find Nearest Right Node in Binary Tree.
