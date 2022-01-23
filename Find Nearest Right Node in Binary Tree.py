@@ -38,7 +38,6 @@ class Solution:
 class Solution:
     def findNearestRightNode(self, root: TreeNode, u: TreeNode) -> Optional[TreeNode]:
         # 番兵を使った方法。各レベルの終端に番兵としてnull(PythonのNone)を入れることで階層の管理を行う。
-        # return cur_level.popleft() if cur_level else None
         if root is None:
             return []
         
