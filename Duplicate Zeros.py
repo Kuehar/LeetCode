@@ -36,3 +36,22 @@ class Solution:
                 arr[i + possible_dups] = 0
             else:
                 arr[i + possible_dups] = arr[i]
+
+                
+class Solution:
+    def duplicateZeros(self, arr: List[int]) -> None:
+        """
+        Do not return anything, modify arr in-place instead.
+        """
+        l = len(arr)
+        index = 0
+        while index < l:
+            if arr[index] == 0:
+                arr.insert(index+1,0)
+                index += 2
+                arr.pop()
+            else:
+                index+=1
+# Runtime: 146 ms, faster than 23.78% of Python3 online submissions for Duplicate Zeros.
+# Memory Usage: 14.8 MB, less than 61.64% of Python3 online submissions for Duplicate Zeros.  
+
