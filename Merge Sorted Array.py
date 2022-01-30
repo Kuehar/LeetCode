@@ -23,8 +23,8 @@ class Solution:
         for i in range(n):
             nums1[i+m] = nums2[i]
         nums1.sort()
-# Runtime: 146 ms, faster than 23.78% of Python3 online submissions for Duplicate Zeros.
-# Memory Usage: 14.8 MB, less than 61.64% of Python3 online submissions for Duplicate Zeros.
+# Runtime: 40 ms, faster than 62.01% of Python3 online submissions for Merge Sorted Array.
+# Memory Usage: 14 MB, less than 94.01% of Python3 online submissions for Merge Sorted Array.
 
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
