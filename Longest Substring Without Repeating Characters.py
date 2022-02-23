@@ -34,3 +34,19 @@ class Solution:
         return res
 # Runtime: 131 ms, faster than 26.07% of Python3 online submissions for Longest Substring Without Repeating Characters.
 # Memory Usage: 14.3 MB, less than 54.91% of Python3 online submissions for Longest Substring Without Repeating Characters.
+
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        n = len(s)
+        ans = 0
+        mp = {}
+        i = 0
+        for j in range(n):
+            if s[j] in mp:
+                i = max(mp[s[j]],i)
+                
+            ans = max(ans,j-i+1)
+            mp[s[j]] = j +1
+        return ans
+# Runtime: 94 ms, faster than 53.46% of Python3 online submissions for Longest Substring Without Repeating Characters.
+# Memory Usage: 14 MB, less than 97.46% of Python3 online submissions for Longest Substring Without Repeating Characters.
