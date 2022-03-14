@@ -1,15 +1,16 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        dict = {")":"(","]":"[","}":"{"}
-        for char in s:
-            if char in dict.values():
-                stack.append(char)
-            elif char in dict.keys():
-                if stack == [] or dict[char] != stack.pop():
+        mapping = {")": "(", "}": "{", "]": "["}
+        for st in s:
+            if st in mapping:
+                top_element = stack.pop() if stack else "#"
+                if mapping[st] != top_element:
                     return False
             else:
-                return False
-        return stack == []
+                stack.append(st)
+        return not stack
+            
+        
 # Runtime: 36 ms, faster than 30.47% of Python3 online submissions for Valid Parentheses.
 # Memory Usage: 13.8 MB, less than 77.84% of Python3 online submissions for Valid Parentheses.
